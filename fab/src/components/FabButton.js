@@ -35,7 +35,7 @@ export default class components extends Component {
         {
           translateY: this.animation.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, -160]
+            outputRange: [0, -130]
           })
         }
       ]
@@ -55,13 +55,13 @@ export default class components extends Component {
     return (
       <View style={[styles.container, this.props.style]}>
 
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={ () => alert('Curtir') }>
           <Animated.View style={[styles.button, styles.submenu, heartStyle]}>
             <Icon name="heart" size={20} color="#FFF" />
           </Animated.View>
         </TouchableWithoutFeedback>
 
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={ () => alert('Câmera') }>
           <Animated.View style={[styles.button, styles.submenu, cameraStyle]}>
             <Icon name="camera" size={20} color="#FFF" />
           </Animated.View>
